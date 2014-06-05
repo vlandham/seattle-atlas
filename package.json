@@ -1,0 +1,17 @@
+{
+  "name": "seattle-atlas",
+  "version": "0.0.1",
+  "license":"MIT",
+  "description":"",
+  "author":{
+    "name": "Jim Vallandingham",
+    "url": "http://vallandingham.me/"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "topojson": ">=1.6.2 <2"
+  }
+}
