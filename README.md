@@ -26,3 +26,9 @@ npm install
 <b>shp/osm.shp</b>
 
 Shapefiles from [Metro Extracts](http://metro.teczno.com/#seattle).
+
+<b>shp/footprints.shp</b>
+
+2009 building footprints from [Data Portal](https://data.seattle.gov/dataset/2009-Building-Outlines/y7u8-vad7)
+
+<b>shp/neighborhoods.shp</b>

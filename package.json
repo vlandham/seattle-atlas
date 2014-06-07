@@ -2,7 +2,7 @@
   "name": "seattle-atlas",
   "version": "0.0.1",
   "license":"MIT",
-  "description":"",
+  "description":"Download data about Seattle, WA",
   "author":{
     "name": "Jim Vallandingham",
     "url": "http://vallandingham.me/"
@@ -12,6 +12,9 @@
     "url": ""
   },
   "devDependencies": {
-    "topojson": ">=1.6.2 <2"
+    "topojson": ">=1.6.2 <2",
+    "shapefile":"0.1",
+    "d3":"3",
+    "canvas": "1"
   }
 }
