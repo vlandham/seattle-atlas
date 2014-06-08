@@ -11,8 +11,8 @@ var fs = require("fs"),
 console.log('Generating file for ' + process.argv[2])
 var file = fs.createWriteStream(process.argv[3]);
 
-var width = 350
-    height = 350
+var width = 500
+    height = 500
 
 var canvas = new Canvas(width, height),
     context = canvas.getContext('2d');
