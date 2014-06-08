@@ -17,6 +17,11 @@ zip/data/buildings.zip:
 	curl "https://data.seattle.gov/api/file_data/u7Zl0GYIIrWvONvtMBxcIkFqI3_mmCHhXagXcGJ30tg" -o $@.download
 	mv $@.download $@
 
+zip/data/addresses.zip:
+	mkdir -p $(dir $@)
+	curl "https://data.seattle.gov/api/file_data/CWjeD1zuxggmFFRt34zlSc-PJxb7KRahRQwjrQiJTBw" -o $@.download
+	mv $@.download $@
+
 zip/data/footprints-1999.zip:
 	mkdir -p $(dir $@)
 	curl "https://data.seattle.gov/api/file_data/fE-eWRCPTo4R35GLxbM07ECh-WTo7ucAV7ottdaVUiQ" -o $@.download
