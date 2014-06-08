@@ -23,8 +23,8 @@ npm install
 
 ## Make Targets
 
-... | ... | ... |...
-:---: | :---: | :---: | :---:
+... | ... | ... 
+:---: | :---: | :---: 
 ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/neighborhoods.png) **Neighborhoods** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/buildings.png) **Building Footprints** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/neighborhoods.png) **Neighborhoods**  
 
 <b>shp/osm.shp</b>
