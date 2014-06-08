@@ -25,7 +25,7 @@ npm install
 
 ... | ... | ... 
 :---: | :---: | :---: 
-![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/neighborhoods.png) **Neighborhoods** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/buildings.png) **Building Footprints** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/steets.png) **Streets**  
+![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/neighborhoods.png) **Neighborhoods** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/buildings.png) **Building Footprints** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/streets.png) **Streets**  
 ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/parks.png) **Parks** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/zoning.png) **Zoning** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/trees.png) **Trees**  
 ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/shorelines.png) **Shorelines** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/zoning.png) **Zoning** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/trees.png) **Trees**  
 
@@ -45,7 +45,7 @@ Neighborhood outlines from [Data Portal]()
 
 <b>shp/streets.shp</b>
 
-Steet Network data from [Data Portal](https://data.seattle.gov/dataset/Street-Network-Database/afip-2mzr)
+Street Network data from [Data Portal](https://data.seattle.gov/dataset/Street-Network-Database/afip-2mzr)
 
 <b>shp/parks.shp</b>
 
