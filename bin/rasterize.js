@@ -33,37 +33,23 @@ var path = d3.geo.path()
     .pointRadius(1);
 
 
-// var reader = shapefile.reader(process.argv[2], {"ignore-properties": false})
-// reader.readHeader(function(error,header) {
-//   console.log(error);
-//   projection.scale(1).translate([0, 0])
-//   b = path.bounds(header)
-//   s = .99 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height)
-//   t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2]
-//   projection.scale(s).translate(t)
-// 
-//   reader.readRecord(function(error,record) {
-//     reader.close();
-//   });
-// });
 
-
-shapefile.readStream(process.argv[2], {"ignore-properties": false})
-  .on('header', function(header) {
-     console.log('header')
-     projection.scale(1).translate([0, 0])
-     b = path.bounds(header)
-    console.log(b)
-     s = .99 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height)
-     t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2]
-     projection.scale(s).translate(t)
-
-  })
-  .on("feature", function(feature) {
+shapefile.read(process.argv[2], {"ignore-properties": false}, function(error, collection) {
+  projection.scale(1).translate([0, 0])
+  var bb = collection.bbox;
+  b = path.bounds(collection);
+  console.log(b);
+  s = .99 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height)
+  t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2]
+  projection.scale(s).translate(t)
+  collection.features.forEach(function(feature) {
     context.beginPath();
     path(feature);
-    if (feature.geometry && /Point$/.test(feature.geometry.type)) context.fill();
-    else context.stroke();
-  })
-  .on("error", function(error) { throw error; })
-  .on("end", function() { canvas.pngStream().pipe(file) })
+    if (feature.geometry && /Point$/.test(feature.geometry.type)) {
+      context.fill();
+    } else {
+      context.stroke();
+    }
+  });
+  canvas.pngStream().pipe(file)
+});

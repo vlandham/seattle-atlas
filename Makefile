@@ -54,7 +54,7 @@ shp/%.shp: zip/data/%.zip
 out/%.png: shp/%.shp bin/rasterize.js
 	mkdir -p $(dir $@)
 	node --max_old_space_size=8192 bin/rasterize.js $< $@
-	# pngnq -f -n 256 -s 10 -Q f -e ".png" $@
+	pngnq -f -n 256 -s 10 -Q f -e ".png" $@
 
 # shp/%.shp:
 # 	rm -rf $(basename $@)

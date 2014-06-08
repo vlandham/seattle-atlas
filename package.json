@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "topojson": ">=1.6.2 <2",
-    "shapefile":"0.1",
+    "shapefile":"0.3",
     "d3":"3",
     "canvas": "1"
   }
