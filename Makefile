@@ -42,8 +42,9 @@ shp/osm.shp: zip/osm/seattle.osm2pgsql-shapefiles.zip
 shp/%.shp: zip/data/%.zip
 	mkdir -p $(dir $@)
 	unzip -o -d shp $< 'WGS84/*'
+	bin/remove_spaces.sh shp/WGS84
 	for file in `find shp/WGS84 -name '*.shp'`; do \
-		ogr2ogr -dim 2 -f 'ESRI Shapefile' -t_srs EPSG:4326 $(basename $@).$${file##*.} "$$file"; \
+		ogr2ogr -dim 2 -f 'ESRI Shapefile' -t_srs EPSG:4326 $(basename $@).$${file##*.} $$file; \
 		chmod 644 $(basename $@).$${file##*.}; \
 	done
 		
