@@ -23,12 +23,18 @@ npm install
 
 ## Make Targets
 
+... | ... | ... |...
+:---: | :---: | :---: | :---:
+![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/neighborhoods.png) **Neighborhoods** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/buildings.png) **Building Footprints** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/neighborhoods.png) **Neighborhoods**  
+
 <b>shp/osm.shp</b>
 
 Shapefiles from [Metro Extracts](http://metro.teczno.com/#seattle).
 
-<b>shp/footprints.shp</b>
+<b>shp/buildings.shp</b>
 
 2009 building footprints from [Data Portal](https://data.seattle.gov/dataset/2009-Building-Outlines/y7u8-vad7)
 
 <b>shp/neighborhoods.shp</b>
+
+Neighborhood outlines from [Data Portal]()
