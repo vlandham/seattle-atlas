@@ -27,7 +27,7 @@ npm install
 :---: | :---: | :---: 
 ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/neighborhoods.png) **Neighborhoods** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/buildings.png) **Building Footprints** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/streets.png) **Streets**  
 ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/parks.png) **Parks** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/zoning.png) **Zoning** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/trees.png) **Trees**  
-![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/shorelines.png) **Shorelines** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/zoning.png) **Zoning** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/trees.png) **Trees**  
+![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/shorelines.png) **Shorelines** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/streams.png) **Streams** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/trees.png) **Trees**  
 
 ## Shapefiles
 
@@ -62,5 +62,9 @@ Tree locations from [Data Portal](https://data.seattle.gov/dataset/Trees/xg4t-j3
 <b>shp/shorelines.shp</b>
 
 Shoreline data from [Data Portal](https://data.seattle.gov/dataset/Shorelines/gf6u-sgut)
+
+<b>shp/streams.shp</b>
+
+stream data from [Data Portal](https://data.seattle.gov/dataset/Streams/fwb4-f3gx)
 
 ## TopoJSON

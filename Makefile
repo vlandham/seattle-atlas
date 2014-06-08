@@ -47,6 +47,11 @@ zip/data/shorelines.zip:
 	curl "https://data.seattle.gov/api/file_data/MulEsQl5gHuxU_f1ilgWRhDr1zbUTN-_skTIzUHs6xM" -o $@.download
 	mv $@.download $@
 
+zip/data/streams.zip:
+	mkdir -p $(dir $@)
+	curl "https://data.seattle.gov/api/file_data/_hyoYTVi2kDL9jjZaPpUdgOiiRqVVgJgF-yNuwYjuq8" -o $@.download
+	mv $@.download $@
+
 zip/streets/streets.zip:
 	mkdir -p $(dir $@)
 	curl "https://data.seattle.gov/api/file_data/PEJgzGG01F_8_a3gFDJkkUIt0NoG0Zx5hR7fOAzz-Ik" -o $@.download
