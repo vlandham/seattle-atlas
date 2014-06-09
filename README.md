@@ -29,7 +29,13 @@ npm install
 ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/parks.png) **Parks** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/zoning.png) **Zoning** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/trees.png) **Trees**  
 ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/shorelines.png) **Shorelines** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/streams.png) **Streams** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/addresses.png) **Addresses**  
 
-## Shapefiles
+All Make Targets can be run using make. Example:
+
+```bash
+make shp/buildings.shp
+```
+
+### Shapefiles
 
 <b>shp/osm.shp</b>
 
