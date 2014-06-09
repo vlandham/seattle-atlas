@@ -27,7 +27,7 @@ npm install
 :---: | :---: | :---: 
 ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/neighborhoods.png) **Neighborhoods** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/buildings.png) **Building Footprints** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/streets.png) **Streets**  
 ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/parks.png) **Parks** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/zoning.png) **Zoning** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/trees.png) **Trees**  
-![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/shorelines.png) **Shorelines** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/streams.png) **Streams** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/trees.png) **Trees**  
+![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/shorelines.png) **Shorelines** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/streams.png) **Streams** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/addresses.png) **Addresses**  
 
 ## Shapefiles
 
