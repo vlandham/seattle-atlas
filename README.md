@@ -67,4 +67,8 @@ Shoreline data from [Data Portal](https://data.seattle.gov/dataset/Shorelines/gf
 
 stream data from [Data Portal](https://data.seattle.gov/dataset/Streams/fwb4-f3gx)
 
+<b>shp/urban-villages.shp</b>
+
+from [Data Portal](https://data.seattle.gov/dataset/Urban-Villages/ugw3-tp9e)
+
 ## TopoJSON

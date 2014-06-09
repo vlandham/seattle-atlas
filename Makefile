@@ -57,6 +57,11 @@ zip/data/streams.zip:
 	curl "https://data.seattle.gov/api/file_data/_hyoYTVi2kDL9jjZaPpUdgOiiRqVVgJgF-yNuwYjuq8" -o $@.download
 	mv $@.download $@
 
+zip/data/urban-villages.zip:
+	mkdir -p $(dir $@)
+	curl "https://data.seattle.gov/api/file_data/p22YgePthVgtok55zqkHbtirq05z9PpOMY1P7ARoJ0I" -o $@.download
+	mv $@.download $@
+
 zip/streets/streets.zip:
 	mkdir -p $(dir $@)
 	curl "https://data.seattle.gov/api/file_data/PEJgzGG01F_8_a3gFDJkkUIt0NoG0Zx5hR7fOAzz-Ik" -o $@.download
