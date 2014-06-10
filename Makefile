@@ -68,9 +68,39 @@ zip/streets/streets.zip:
 	curl "https://data.seattle.gov/api/file_data/PEJgzGG01F_8_a3gFDJkkUIt0NoG0Zx5hR7fOAzz-Ik" -o $@.download
 	mv $@.download $@
 
+zip/census/tracts.zip:
+	mkdir -p $(dir $@)
+	curl "http://www2.census.gov/geo/tiger/TIGER2013/TRACT/tl_2013_53_tract.zip" -o $@.download
+	mv $@.download $@
+
+zip/census/school-districts.zip:
+	mkdir -p $(dir $@)
+	curl "http://www2.census.gov/geo/tiger/TIGER2013/UNSD/tl_2013_53_unsd.zip" -o $@.download
+	mv $@.download $@
+
+zip/census/block-groups.zip:
+	mkdir -p $(dir $@)
+	curl "http://www2.census.gov/geo/tiger/TIGER2013/BG/tl_2013_53_bg.zip" -o $@.download
+	mv $@.download $@
+
+zip/transit/ferry-routes.zip:
+	mkdir -p $(dir $@)
+	curl "ftp://ftp.wsdot.wa.gov/gis/GeoDataDistribution/Maps/24k/DOT_Cartog/ferry.zip" -o $@.download
+	mv $@.download $@
+
+zip/transit/ferry-terminals.zip:
+	mkdir -p $(dir $@)
+	curl "ftp://ftp.wsdot.wa.gov/gis/GeoDataDistribution/Maps/24k/DOT_Cartog/ferrytermspubpriv.zip" -o $@.download
+	mv $@.download $@
+
 zip/transit/transit.zip:
 	mkdir -p $(dir $@)
 	curl "http://metro.kingcounty.gov/GTFS/google_transit.zip" -o $@.download
+	mv $@.download $@
+
+zip/transit/beach-access.zip:
+	mkdir -p $(dir $@)
+	curl "ftp://ecy.wa.gov/gis_a/shore/Public_Access_WA_SHP.zip" -o $@.download
 	mv $@.download $@
 
 csv/starbucks.csv:
@@ -94,6 +124,16 @@ zip/unzip/%: zip/streets/%.zip
 	mkdir -p $(dir $@)
 	unzip -o -d shp $< '**/WGS84/*'
 	mv shp/**/WGS84 shp/WGS84
+
+zip/unzip/%: zip/census/%.zip
+	mkdir -p $(dir $@)
+	mkdir -p shp/WGS84
+	unzip -o -d shp/WGS84 $<
+
+zip/unzip/%: zip/transit/%.zip
+	mkdir -p $(dir $@)
+	mkdir -p shp/WGS84
+	unzip -o -d shp/WGS84 $<
 
 shp/%.shp: zip/unzip/%
 	bin/remove_spaces.sh shp/WGS84

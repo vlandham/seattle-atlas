@@ -28,6 +28,7 @@ npm install
 ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/neighborhoods.png) **Neighborhoods** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/buildings.png) **Building Footprints** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/streets.png) **Streets**  
 ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/parks.png) **Parks** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/zoning.png) **Zoning** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/trees.png) **Trees**  
 ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/shorelines.png) **Shorelines** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/streams.png) **Streams** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/addresses.png) **Addresses**  
+![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/tracts.png) **Census Tracts** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/school-districts.png) **School Districts** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/block-groups.png) **Block Groups**  
 
 All Make Targets can be run using make. Example:
 
@@ -77,4 +78,24 @@ stream data from [Data Portal](https://data.seattle.gov/dataset/Streams/fwb4-f3g
 
 from [Data Portal](https://data.seattle.gov/dataset/Urban-Villages/ugw3-tp9e)
 
-## TopoJSON
+<b>shp/tracts.shp</b>
+
+Census Tracts for Washington - from [Census](http://www.census.gov/cgi-bin/geo/shapefiles2013/main)
+
+<b>shp/beach-access.shp</b>
+
+Beach Access Sites from [WA Ecology Dept](https://fortress.wa.gov/ecy/coastalatlas/tools/PublicAccessDownload.aspx)
+
+### TopoJSON
+
+## Other GIS Sources
+
+Here are some other links for GIS / Shapefile data for Washington / Seattle:
+
+
+  * [WA department of Natural Resources](http://fortress.wa.gov/dnr/app1/dataweb/dmmatrix.html)
+  * [King County GIS Data](http://www.kingcounty.gov/operations/GIS/GISData/Metadata.aspx)
+  * [WAGDA from UW](http://wagda.lib.washington.edu/data/)
+  * [WA department of Transportation](http://www.wsdot.wa.gov/mapsdata/geodatacatalog/default.htm)
+  * [WA department of Ecology](http://www.ecy.wa.gov/services/gis/data/data.htm)
+
