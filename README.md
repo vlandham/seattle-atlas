@@ -29,6 +29,7 @@ npm install
 ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/parks.png) **Parks** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/zoning.png) **Zoning** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/trees.png) **Trees**  
 ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/shorelines.png) **Shorelines** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/streams.png) **Streams** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/addresses.png) **Addresses**  
 ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/tracts.png) **Census Tracts** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/school-districts.png) **School Districts** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/block-groups.png) **Block Groups**  
+![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/beach-access.png) **Beach Access** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/geo-names.png) **Geo Names** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/tribal-lands.png) **Tribal Lands**  
 
 All Make Targets can be run using make. Example:
 
@@ -85,6 +86,10 @@ Census Tracts for Washington - from [Census](http://www.census.gov/cgi-bin/geo/s
 <b>shp/beach-access.shp</b>
 
 Beach Access Sites from [WA Ecology Dept](https://fortress.wa.gov/ecy/coastalatlas/tools/PublicAccessDownload.aspx)
+
+<b>shp/geo-names.shp</b>
+
+Geographic Names Information System from [WA Ecology Dept](http://www.ecy.wa.gov/services/gis/data/data.htm)
 
 ### TopoJSON
 

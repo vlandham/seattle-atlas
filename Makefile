@@ -98,9 +98,24 @@ zip/transit/transit.zip:
 	curl "http://metro.kingcounty.gov/GTFS/google_transit.zip" -o $@.download
 	mv $@.download $@
 
-zip/transit/beach-access.zip:
+zip/beach-access.zip:
 	mkdir -p $(dir $@)
 	curl "ftp://ecy.wa.gov/gis_a/shore/Public_Access_WA_SHP.zip" -o $@.download
+	mv $@.download $@
+
+zip/costal-zone-atlas.zip:
+	mkdir -p $(dir $@)
+	curl "ftp://www.ecy.wa.gov/gis_a/geoscientificinformation/slopestab.zip" -o $@.download
+	mv $@.download $@
+
+zip/tribal-lands.zip:
+	mkdir -p $(dir $@)
+	curl "ftp://www.ecy.wa.gov/gis_a/boundaries/tribal.zip" -o $@.download
+	mv $@.download $@
+
+zip/geo-names.zip:
+	mkdir -p $(dir $@)
+	curl "ftp://www.ecy.wa.gov/gis_a/location/gnis.zip" -o $@.download
 	mv $@.download $@
 
 csv/starbucks.csv:
@@ -131,6 +146,11 @@ zip/unzip/%: zip/census/%.zip
 	unzip -o -d shp/WGS84 $<
 
 zip/unzip/%: zip/transit/%.zip
+	mkdir -p $(dir $@)
+	mkdir -p shp/WGS84
+	unzip -o -d shp/WGS84 $<
+
+zip/unzip/%: zip/%.zip
 	mkdir -p $(dir $@)
 	mkdir -p shp/WGS84
 	unzip -o -d shp/WGS84 $<
