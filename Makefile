@@ -1,4 +1,5 @@
 TOPOJSON = node_modules/.bin/topojson
+CSV2GEO = node_modules/.bin/csv2geojson
 
 shps: shp/osm.shp \
 	shp/footprints.shp \
@@ -72,6 +73,12 @@ zip/transit/transit.zip:
 	curl "http://metro.kingcounty.gov/GTFS/google_transit.zip" -o $@.download
 	mv $@.download $@
 
+csv/starbucks.csv:
+	mkdir -p $(dir $@)
+	curl "https://opendata.socrata.com/api/views/ddym-zvjk/rows.csv?accessType=DOWNLOAD" -o $@.download
+	mv $@.download $@
+
+
 shp/osm.shp: zip/osm/seattle.osm2pgsql-shapefiles.zip
 	rm -rf $(basename $@)
 	mkdir -p $(basename $@)
@@ -95,6 +102,11 @@ shp/%.shp: zip/unzip/%
 		chmod 644 $(basename $@).$${file##*.}; \
 	done
 	rm -rf shp/WGS84
+
+geo/starbucks.json: csv/starbucks.csv
+	mkdir -p $(dir $@)
+	$(CSV2GEO) -lat 'Latitude' -lon 'Longitude' $< > $@
+
 
 out/%.png: shp/%.shp bin/rasterize.js
 	mkdir -p $(dir $@)

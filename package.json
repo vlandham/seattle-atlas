@@ -1,20 +1,23 @@
 {
   "name": "seattle-atlas",
-  "version": "0.0.1",
-  "license":"MIT",
-  "description":"Download data about Seattle, WA",
-  "author":{
+  "version": "0.0.2",
+  "license": "MIT",
+  "description": "Download data about Seattle, WA",
+  "author": {
     "name": "Jim Vallandingham",
     "url": "http://vallandingham.me/"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/vlandham/seattle-atlas.git"
   },
   "devDependencies": {
     "topojson": ">=1.6.2 <2",
-    "shapefile":"0.3",
-    "d3":"3",
+    "d3": "3",
     "canvas": "1"
+  },
+  "dependencies": {
+    "csv2geojson": "^3.7.0",
+    "shapefile": "0.3"
   }
 }
