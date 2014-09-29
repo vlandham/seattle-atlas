@@ -8,11 +8,12 @@ Idea copied from and based on Justin Palmer's [portland-atlas](https://github.co
 
 ## Prerequisites
 
-Before you can run `make`, you’ll need to install `Node` and `ogr2ogr`. If you are on Mac OS X, and using [Homebrew](http://mxcl.github.com/homebrew/) then just run:
+Before you can run `make`, you’ll need to install `Node` and `ogr2ogr` and some other prereqs. If you are on Mac OS X, and using [Homebrew](http://mxcl.github.com/homebrew/) then just run:
 
 ```bash
 brew install node 
 brew install gdal
+brew install cairo
 ```
 
 And then, from this repository’s root directory, install the dependencies:
