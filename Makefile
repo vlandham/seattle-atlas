@@ -2,7 +2,7 @@ TOPOJSON = node_modules/.bin/topojson
 CSV2GEO = node_modules/.bin/csv2geojson
 
 shps: shp/osm.shp \
-	shp/footprints.shp \
+	shp/footprints-1999.shp \
 	shp/neighborhoods.shp
 
 .SECONDARY:
@@ -23,7 +23,7 @@ zip/data/addresses.zip:
 	curl "https://data.seattle.gov/api/file_data/CWjeD1zuxggmFFRt34zlSc-PJxb7KRahRQwjrQiJTBw" -o $@.download
 	mv $@.download $@
 
-zip/data/footprints-1999.zip:
+zip/footprints/footprints-1999.zip:
 	mkdir -p $(dir $@)
 	curl "https://data.seattle.gov/api/file_data/fE-eWRCPTo4R35GLxbM07ECh-WTo7ucAV7ottdaVUiQ" -o $@.download
 	mv $@.download $@
@@ -136,6 +136,11 @@ zip/unzip/%: zip/data/%.zip
 	unzip -o -d shp $< '**WGS84/*'
 
 zip/unzip/%: zip/streets/%.zip
+	mkdir -p $(dir $@)
+	unzip -o -d shp $< '**/WGS84/*'
+	mv shp/**/WGS84 shp/WGS84
+
+zip/unzip/%: zip/footprints/%.zip
 	mkdir -p $(dir $@)
 	unzip -o -d shp $< '**/WGS84/*'
 	mv shp/**/WGS84 shp/WGS84
