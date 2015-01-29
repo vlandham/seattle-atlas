@@ -172,6 +172,10 @@ geo/starbucks.json: csv/starbucks.csv
 	mkdir -p $(dir $@)
 	$(CSV2GEO) -lat 'Latitude' -lon 'Longitude' $< > $@
 
+geo/%.json: shp/%.shp
+	mkdir -p $(dir $@)
+	ogr2ogr -f geoJSON $(basename $@).json $<
+
 
 out/%.png: shp/%.shp bin/rasterize.js
 	mkdir -p $(dir $@)
