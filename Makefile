@@ -195,7 +195,17 @@ topo/neighborhoods.json: shp/neighborhoods.shp
 		-p shape_area=SHAPE_AREA \
 		-- $<
 
-
+topo/parks.json: shp/parks.shp
+	mkdir -p $(dir $@)
+	${TOPOJSON} \
+		-o $@ \
+		--no-pre-quantization \
+		--post-quantization=1e4 \
+		--simplify=1e-11 \
+		--id-property=NAME \
+		-p name=PMA_NAME \
+		-p date=ACQ_DATE \
+		-- $<
 
 # shp/%.shp:
 # 	rm -rf $(basename $@)

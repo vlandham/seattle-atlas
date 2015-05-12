@@ -116,6 +116,8 @@ There are also a few geoJSON specific files:
 
 <b>topo/neighborhoods.json</b>
 
+<b>topo/parks.json</b>
+
 ## Other GIS Sources
 
 Here are some other links for GIS / Shapefile data for Washington / Seattle:
