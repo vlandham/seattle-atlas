@@ -47,7 +47,7 @@ zip/data/trees.zip:
 	mkdir -p $(dir $@)
 	curl "https://data.seattle.gov/api/file_data/KE9iik5hPNBiu0RMAEfL2aVRXbcGZW-ecSrKihhArTs" -o $@.download
 	mv $@.download $@
-	
+
 zip/data/shorelines.zip:
 	mkdir -p $(dir $@)
 	curl "https://data.seattle.gov/api/file_data/MulEsQl5gHuxU_f1ilgWRhDr1zbUTN-_skTIzUHs6xM" -o $@.download
@@ -182,15 +182,29 @@ out/%.png: shp/%.shp bin/rasterize.js
 	node --max_old_space_size=8192 bin/rasterize.js $< $@
 	pngnq -f -n 256 -s 10 -Q f -e ".png" $@
 
+
+topo/neighborhoods.json: shp/neighborhoods.shp
+	mkdir -p $(dir $@)
+	${TOPOJSON} \
+		-o $@ \
+		--no-pre-quantization \
+		--post-quantization=1e3 \
+		--simplify=1e-10 \
+		--id-property=+HOODS_ \
+		-p name=NAME \
+		-p shape_area=SHAPE_AREA \
+		-- $<
+
+
+
 # shp/%.shp:
 # 	rm -rf $(basename $@)
 # 	mkdir -p $(basename $@)
 # 	tar --exclude="._*" -xzm -C $(basename $@) -f $<
-# 
+#
 # 	for file in `find $(basename $@) -name '*.shp'`; do \
 # 		ogr2ogr -dim 2 -f 'ESRI Shapefile' -t_srs EPSG:4326 $(basename $@).$${file##*.} $$file; \
 # 		chmod 644 $(basename $@).$${file##*.}; \
 # 	done
 # 	rm -rf $(basename $@)
-# 
-
+#

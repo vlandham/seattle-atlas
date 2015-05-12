@@ -2,7 +2,7 @@
 
 Provides convenient method to download Seattle related shapefiles and convert some of them to TopoJSON format.
 
-Inspired by Bostock's [world-atlas](https://github.com/mbostock/world-atlas). 
+Inspired by Bostock's [world-atlas](https://github.com/mbostock/world-atlas).
 
 Idea copied from and based on Justin Palmer's [portland-atlas](https://github.com/Caged/portland-atlas).
 
@@ -11,7 +11,7 @@ Idea copied from and based on Justin Palmer's [portland-atlas](https://github.co
 Before you can run `make`, you’ll need to install `Node` and `ogr2ogr` and some other prereqs. If you are on Mac OS X, and using [Homebrew](http://mxcl.github.com/homebrew/) then just run:
 
 ```bash
-brew install node 
+brew install node
 brew install gdal
 brew install cairo
 ```
@@ -22,15 +22,23 @@ And then, from this repository’s root directory, install the dependencies:
 npm install
 ```
 
+If you run into problems with installing `node-canvas`, you might need to setup your `PKG_CONFIG_PATH` like so:
+
+```bash
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig
+```
+
+This comes from the [node-canvas OSX install](https://github.com/Automattic/node-canvas/wiki/installation---osx) page.
+
 ## Make Targets
 
-... | ... | ... 
-:---: | :---: | :---: 
-![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/neighborhoods.png) **Neighborhoods** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/buildings.png) **Building Footprints** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/streets.png) **Streets**  
-![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/parks.png) **Parks** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/zoning.png) **Zoning** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/trees.png) **Trees**  
-![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/shorelines.png) **Shorelines** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/streams.png) **Streams** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/addresses.png) **Addresses**  
-![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/tracts.png) **Census Tracts** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/school-districts.png) **School Districts** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/block-groups.png) **Block Groups**  
-![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/beach-access.png) **Beach Access** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/geo-names.png) **Geo Names** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/tribal-lands.png) **Tribal Lands**  
+... | ... | ...
+:---: | :---: | :---:
+![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/neighborhoods.png) **Neighborhoods** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/buildings.png) **Building Footprints** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/streets.png) **Streets**
+![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/parks.png) **Parks** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/zoning.png) **Zoning** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/trees.png) **Trees**
+![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/shorelines.png) **Shorelines** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/streams.png) **Streams** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/addresses.png) **Addresses**
+![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/tracts.png) **Census Tracts** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/school-districts.png) **School Districts** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/block-groups.png) **Block Groups**
+![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/beach-access.png) **Beach Access** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/geo-names.png) **Geo Names** | ![](https://raw.githubusercontent.com/vlandham/seattle-atlas/master/out/tribal-lands.png) **Tribal Lands**
 
 All Make Targets can be run using make. Example:
 
@@ -92,7 +100,21 @@ Beach Access Sites from [WA Ecology Dept](https://fortress.wa.gov/ecy/coastalatl
 
 Geographic Names Information System from [WA Ecology Dept](http://www.ecy.wa.gov/services/gis/data/data.htm)
 
+### geoJSON
+
+GeoJSON conversion should work for any of the above shapefiles. The make command uses `geo` as the sub-directory. So, for example, to make a geoJSON file for neighborhoods, it would look something like:
+
+<b>geo/neighborhoods.json</b>
+
+Note the `geo` prefix and the `.json` extension.
+
+There are also a few geoJSON specific files:
+
+<b>geo/starbucks.json</b> - location of all starbucks
+
 ### TopoJSON
+
+<b>topo/neighborhoods.json</b>
 
 ## Other GIS Sources
 
